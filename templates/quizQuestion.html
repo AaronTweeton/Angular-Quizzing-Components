@@ -1,0 +1,14 @@
+<form class="my-5" name="quizQuestion" ng-submit="$ctrl.submit()">
+    <fieldset>
+        <div class="form-group">
+            <label>{{$ctrl.title}}</label>
+            <input class="form-control" name="input" autocomplete="off" ng-model="$ctrl.input">
+            <small class="form-text text-muted" ng-if="$ctrl.isShowingFeedback">
+                {{$ctrl.feedback}}
+            </small>
+        </div>
+        <button type="submit" class="btn btn-primary" ng-disabled="quizQuestion.input.$pristine">
+            Submit
+        </button>
+    </fieldset>
+</form>
